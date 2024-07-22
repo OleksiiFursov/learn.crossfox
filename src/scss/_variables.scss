@@ -1,0 +1,34 @@
+$color-1: #1d1e22;
+$color-2: #fafafa;
+
+
+
+$text-color: #fafafa;
+$brand-color: #f17938;
+
+// light:
+$text-color: $color-1;
+$bg-color: $color-2;
+
+// dark:
+$text-color-dark: $color-2;
+$bg-color-dark: $color-1;
+
+
+$secondary-text: #fff;
+
+$gradient: linear-gradient(to right, #ff7854 0%,#fb9eca 52%,#a46cf9 100%);
+//linear-gradient(90deg, oklch(0.7 0.15 348), oklch(0.7 0.15 306));
+
+
+
+$font-header: Murecho, sans-serif;
+$font-main: Open Sans, sans-serif;
+
+
+$width-mob: 980px;
+$font-s: 1rem;
+$font-m: 2rem;
+$font-l: 2.4rem;
+$font-xl: 2.7rem;
+$font-xxl: 3.7rem;

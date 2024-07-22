@@ -1,0 +1,29 @@
+<footer class="footer">
+  <p>@@FOOTER_YEAR @@COMPANY_NAME</p>
+</footer>
+<script src="/js/index.js"></script>
+<script type="application/ld+json">{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "url": "@@URL",
+  "email": "@@EMAIL",
+  "name": "@@COMPANY_NAME",
+  "logo": "@@URL/android-chrome-512x512.png"
+}</script>
+<script type="application/ld+json">{
+  "@context": "http://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "@@URL",
+  "name": "@@COMPANY_NAME",
+  "image": "@@URL/img/logo/icon-192x192.png",
+  "openingHours": "@@OPENING_HOURS @@OPENS-@@CLOSES",
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["@@DAY_OF_WEEK"],
+    "opens": "@@OPENS",
+    "closes": "@@CLOSES"
+  }],
+  "priceRange": "@PRICE_RANGE"
+}</script>
+</body>
+</html>

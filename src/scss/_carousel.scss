@@ -1,0 +1,73 @@
+section.dark .carousel{
+  &::before {
+    left: 0;
+    background: linear-gradient(90deg, rgba($bg-color-dark, 1) 0%, rgba($bg-color-dark, 0) 100%);
+  }
+
+  &::after {
+    right: 0;
+    background: linear-gradient(90deg, rgba($bg-color-dark, 0) 0%, rgba($bg-color-dark, 1) 100%);
+  }
+}
+
+.carousel {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: 7rem;
+  max-width: 100%;
+  margin-top: 3rem;
+
+  &::before,
+  &::after {
+    content: "";
+    height: 100%;
+    top: 0;
+    width: 10%;
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  &::before {
+    left: 0;
+    background: linear-gradient(90deg, rgba($bg-color, 1) 0%, rgba($bg-color, 0) 100%);
+  }
+
+  &::after {
+    right: 0;
+    background: linear-gradient(90deg, rgba($bg-color, 0) 0%, rgba($bg-color, 1) 100%);
+  }
+
+  &-items {
+    flex-shrink: 0;
+    display: flex;
+    gap: 7rem;
+    justify-content: space-around;
+    min-width: 100%;
+    animation: anim-carousel 30s linear infinite;
+
+    & > img {
+      &[alt="Express"]{
+        filter: drop-shadow(0 0 .3rem rgba(0,0,0,.4));
+      }
+      @include isMobile {
+        width: 6rem;
+        height: 6rem;
+        //margin-bottom: 3rem;
+      }
+      width: 7.5rem;
+      height: 7.5rem;
+    }
+  }
+}
+
+@keyframes anim-carousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 3.5rem));
+  }
+}

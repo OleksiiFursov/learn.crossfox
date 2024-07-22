@@ -1,0 +1,301 @@
+@use "../../node_modules/@crossfox/css-start/dist/base.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap");
+//@import "swiper";
+
+@import "variables";
+
+@font-face {
+  font-family: "Murecho";
+  font-weight: 500;
+  src: local("Murecho-Medium"), url("../fonts/Murecho/Murecho-Medium.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Murecho";
+  font-weight: 200;
+  src: local("Murecho-Light"), url("../fonts/Murecho/Murecho-Light.ttf");
+  font-display: swap;
+}
+
+
+@mixin isMobile {
+  @media (max-width: $width-mob) {
+    @content;
+  }
+}
+
+@mixin isDesktop {
+  @media (min-width: $width-mob) {
+    @content;
+  }
+}
+
+html {
+  font-size: 2.1vw;
+  scroll-padding-top: 4rem;
+  @include isDesktop {
+    font-size: .54vw;
+  }
+}
+
+body {
+  font: 400 185%/1.4 $font-main;
+  display: flex;
+  flex-direction: column;
+
+}
+
+main {
+  flex-grow: 1;
+}
+
+%pos-fix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+%pos-full {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+%flex-bt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.like-p, p {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #818181
+}
+
+.dark {
+  .like-p, p {
+    color: #818181
+  }
+}
+
+section[id] {
+  padding: 7rem 0;
+  min-height: 50dvh;
+  position: relative;
+  overflow: hidden;
+
+  &.dark {
+    color: $text-color-dark;
+    background: $bg-color-dark;
+  }
+
+  color: $text-color;
+  background: $bg-color;
+}
+
+.btn-link {
+  font-weight: 700;
+}
+
+
+.btn, [class*='btn-']:not(.btn-link) {
+  background: $brand-color;
+  font-weight: 700;
+  border: 0;
+  padding: 1.4rem;
+  border-radius: 3rem;
+  color: #fff;
+  transition: .4s;
+  min-width: 15rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+
+  &::after {
+    &[disabled] {
+      filter: grayscale(100%);
+      opacity: .5
+    }
+  }
+}
+
+.btn-clicker[class] {
+  border: .4rem solid $brand-color;
+  padding: 1.2rem;
+  min-width: 25rem;
+  @include isDesktop {
+
+    &::after {
+      content: 'Кликни!';
+      border-radius: 3rem;
+      background: $brand-color;
+      filter: brightness(90%);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      z-index: -1;
+      transition: letter-spacing .3s;
+    }
+
+    &:hover {
+      &::after {
+        z-index: 1;
+        letter-spacing: .3rem;
+      }
+    }
+  }
+
+  &::before {
+    background: #fff;
+    content: "";
+    height: 400%;
+    left: 0;
+    opacity: .2;
+    position: absolute;
+    top: 0;
+    transform: translate(-200%, -30%) rotate(35deg);
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    width: 3rem;
+    z-index: 0;
+    animation: 3s anim-btn infinite;
+
+  }
+}
+
+h1, h2:not([class*="like-"]), h3, h4, h5, h6 {
+  font-family: $font-header;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 200;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+h2:not([class*="like-"]) {
+  line-height: 1;
+  font-size: 4rem;
+  background-image: $gradient;
+  background-clip: text;
+  color: transparent;
+  font-weight: 200;
+  text-transform: uppercase;
+  text-align: center;
+  width: fit-content;
+  margin: -.1rem auto 5rem;
+}
+
+h3 {
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.list-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.list-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-bottom: 5rem;
+  max-width: 100rem;
+
+  & > li {
+    display: flex;
+    counter-increment: list;
+    @include isDesktop {
+      align-items: center;
+    }
+
+    &::before {
+      content: counter(list) ". ";
+      float: left;
+      width: 1ex;
+      margin-right: 3rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 150%;
+      font-weight: 700;
+    }
+  }
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  label > b {
+    display: block;
+    margin-bottom: .2rem;
+  }
+
+  select, option, input, textarea {
+    background: #fffffa;
+    border: 1px solid #aaa;
+    padding: .6rem;
+    width: 100%;
+  }
+}
+textarea{
+  resize: vertical;
+}
+.btn-close[class] {
+  background: #e2e2e2;
+  color: #222;
+}
+
+.overlay {
+  @extend %pos-fix;
+  background: #0008;
+  height: 100dvh;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+body[class*="active-modal-"] .overlay {
+  z-index: 9;
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.center {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+@keyframes anim-btn {
+  50% {
+    left: 0;
+  }
+  100% {
+    left: 150%;
+  }
+}
