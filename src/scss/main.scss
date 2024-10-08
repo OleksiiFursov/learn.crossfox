@@ -9,28 +9,38 @@
   display: flex;
   align-items: center;
 
-  h1 > strong {
-    white-space: nowrap;
-    background-image: $gradient;
-    background-clip: text;
-    color: transparent;
+  h1{
+    margin-top: 10rem;
+    > span {
+      color: $brand-color;
+    }
   }
-
   h2{
     max-width: 80rem;
-    strong {
-      color: $text-color-dark;
+    span{
+      display: block;
     }
-
   }
-
-  .btns {
-    margin-top: 3.5rem;
+  .cards{
     display: flex;
+    flex-direction: column;
     gap: 2rem;
-    align-items: center;
+    .card{
+      min-height: 30rem;
+      border-left: .1rem solid #6b6b6b;
+      padding: 4rem 3rem;
+      background: $color-3;
+      display: flex;
+      .card-text{
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
   }
 }
+
 
 .perspective {
   perspective: 500px;

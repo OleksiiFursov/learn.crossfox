@@ -10,6 +10,12 @@
   src: local("Murecho-Medium"), url("../fonts/Murecho/Murecho-Medium.ttf");
   font-display: swap;
 }
+@font-face {
+  font-family: "Murecho";
+  font-weight: 400;
+  src: local("Murecho-Medium"), url("../fonts/Murecho/Murecho-Regular.ttf");
+  font-display: swap;
+}
 
 @font-face {
   font-family: "Murecho";
@@ -184,23 +190,20 @@ h1, h2:not([class*="like-"]), h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 4rem;
-  font-weight: 200;
+  font-size: 5rem;
+  line-height: 1.2;
+  font-weight: 400;
   margin-bottom: 2rem;
   text-transform: uppercase;
 }
 
 h2:not([class*="like-"]) {
-  line-height: 1;
-  font-size: 4rem;
-  background-image: $gradient;
-  background-clip: text;
-  color: transparent;
+  line-height: 1.2;
+  font-size: 3.5rem;
   font-weight: 200;
   text-transform: uppercase;
-  text-align: center;
   width: fit-content;
-  margin: -.1rem auto 5rem;
+  margin: -.1rem 0 5rem;
 }
 
 h3 {
