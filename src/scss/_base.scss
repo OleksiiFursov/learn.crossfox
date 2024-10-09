@@ -1,29 +1,6 @@
 @use "../../node_modules/@crossfox/css-start/dist/base.min.css";
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap");
-//@import "swiper";
-
+@import "fonts";
 @import "variables";
-
-@font-face {
-  font-family: "Murecho";
-  font-weight: 500;
-  src: local("Murecho-Medium"), url("../fonts/Murecho/Murecho-Medium.ttf");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Murecho";
-  font-weight: 400;
-  src: local("Murecho-Medium"), url("../fonts/Murecho/Murecho-Regular.ttf");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Murecho";
-  font-weight: 200;
-  src: local("Murecho-Light"), url("../fonts/Murecho/Murecho-Light.ttf");
-  font-display: swap;
-}
-
 
 @mixin isMobile {
   @media (max-width: $width-mob) {
@@ -38,7 +15,7 @@
 }
 
 html {
-  font-size: 2.1vw;
+  font-size: 1.95vw;
   scroll-padding-top: 4rem;
   @include isDesktop {
     font-size: .54vw;
@@ -46,14 +23,48 @@ html {
 }
 
 body {
-  font: 400 185%/1.4 $font-main;
+  font: 400 185%/1.5 $font-main;
+  @include isDesktop {
+    font-size: 170%;
+  }
   display: flex;
   flex-direction: column;
 
 }
 
-main {
-  flex-grow: 1;
+img{
+  object-fit: contain;
+}
+.container {
+  width: 90%;
+  @include isDesktop {
+    width: 85%;
+  }
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-2{
+  width: 90%;
+  @include isDesktop {
+    width: 65%;
+  }
+  max-width: 100rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+@property --num {
+  syntax: '<integer>';
+  initial-value: 0;
+  inherits: false;
+}
+
+%mc {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 %pos-fix {
@@ -62,7 +73,10 @@ main {
   left: 0;
   width: 100%;
 }
-
+%pos-fix-full{
+  @extend %pos-fix;
+  height: 100%;
+}
 %pos-full {
   top: 0;
   left: 0;
@@ -70,182 +84,133 @@ main {
   height: 100%;
 }
 
-%flex-bt {
+
+
+.flex-bt {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 
-.container {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+@keyframes moveUp {
+  0% {
+    background-position: -10% 0;
+  }
+  100% {
+    background-position: -10% 90px;
+  }
+}
+
+@keyframes anim-btn {
+  50% {
+    left: 0;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
+
+@include isMobile {
+  .only-desktop {
+    display: none;
+  }
+}
+
+@include isDesktop {
+  .only-mobile {
+    display: none;
+  }
+}
+
+
+%box-1{
+  background: #fff;
+  padding: 2rem 3rem;
+  transition: 0.1s all;
+  border-radius: 2rem;
+  border: .1rem solid #e4e4e4;
+}
+.mgc{
+  @extend %mc;
+  margin-top: 7rem;
+  text-align: center;
+}
+
+.nowrap{
+  text-wrap: nowrap;
 }
 
 .like-p, p {
-  font-size: 1.8rem;
+  font-size: $font-s;
   font-weight: 400;
-  color: #818181
+  color: #888
 }
 
-.dark {
-  .like-p, p {
-    color: #818181
-  }
-}
-
-section[id] {
-  padding: 7rem 0;
-  min-height: 50dvh;
-  position: relative;
-  overflow: hidden;
-
-  &.dark {
-    color: $text-color-dark;
-    background: $bg-color-dark;
-  }
-
-  color: $text-color;
-  background: $bg-color;
-}
-
-.btn-link {
+.link {
+  color: $brand-color;
   font-weight: 700;
 }
 
-
-.btn, [class*='btn-']:not(.btn-link) {
-  background: $brand-color;
-  font-weight: 700;
-  border: 0;
-  padding: 1.4rem;
-  border-radius: 3rem;
-  color: #fff;
-  transition: .4s;
-  min-width: 15rem;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-
-
-  &::after {
-    &[disabled] {
-      filter: grayscale(100%);
-      opacity: .5
-    }
-  }
+main {
+  flex-grow: 1;
 }
-
-.btn-clicker[class] {
-  border: .4rem solid $brand-color;
-  padding: 1.2rem;
-  min-width: 25rem;
-  @include isDesktop {
-
-    &::after {
-      content: 'Кликни!';
-      border-radius: 3rem;
-      background: $brand-color;
-      filter: brightness(90%);
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      align-items: center;
-      justify-content: center;
-      display: flex;
-      z-index: -1;
-      transition: letter-spacing .3s;
-    }
-
-    &:hover {
-      &::after {
-        z-index: 1;
-        letter-spacing: .3rem;
-      }
-    }
-  }
-
-  &::before {
-    background: #fff;
-    content: "";
-    height: 400%;
+section[class*='modal-'] {
+  position: fixed;
+  @include isMobile {
+    bottom: 0;
     left: 0;
-    opacity: .2;
-    position: absolute;
-    top: 0;
-    transform: translate(-200%, -30%) rotate(35deg);
-    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
-    width: 3rem;
-    z-index: 0;
-    animation: 3s anim-btn infinite;
-
+    width: 100%;
+    border-radius: 3rem 3rem 0 0;
+  }
+  @include isDesktop {
+    top: 50%;
+    left: 50%;
+    width: 65rem;
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, .1);
+    transform: translate(-50%, -50%);
+    border-radius: 3rem 3rem;
+  }
+  background: #fff;
+  z-index: 9;
+  transition: .4s;
+  padding: 2rem 0;
+}
+body:not(.active-modal-ask) .modal-ask, body:not(.active-modal-consultant) .modal-consultant, body:not(.active-modal-roadmap) .modal-roadmap {
+  @include isMobile {
+    transform: translateY(100%);
+  }
+  @include isDesktop {
+    transform: translate(-50%, -50%) scale(0);
   }
 }
-
 h1, h2:not([class*="like-"]), h3, h4, h5, h6 {
   font-family: $font-header;
-}
-
-h1 {
-  font-size: 5rem;
-  line-height: 1.2;
-  font-weight: 400;
-  margin-bottom: 2rem;
-  text-transform: uppercase;
+  word-spacing: -.05em;
 }
 
 h2:not([class*="like-"]) {
-  line-height: 1.2;
-  font-size: 3.5rem;
-  font-weight: 200;
+  line-height: 1;
+  font-size: 3.2rem;
+  font-weight: 500;
   text-transform: uppercase;
+  text-align: center;
   width: fit-content;
-  margin: -.1rem 0 5rem;
+  margin: -.1rem auto 4rem;
+  @include isDesktop {
+    margin-bottom: 6rem;
+  }
+  color: $brand-color-2;
+  position: relative;
 }
+
 
 h3 {
   font-weight: 500;
   text-transform: uppercase;
   margin-bottom: 1rem;
-  font-size: 2rem;
-}
-
-.list-1 {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-}
-
-.list-2 {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  margin-bottom: 5rem;
-  max-width: 100rem;
-
-  & > li {
-    display: flex;
-    counter-increment: list;
-    @include isDesktop {
-      align-items: center;
-    }
-
-    &::before {
-      content: counter(list) ". ";
-      float: left;
-      width: 1ex;
-      margin-right: 3rem;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      font-size: 150%;
-      font-weight: 700;
-    }
-  }
+  font-size: $font-m;
 }
 
 
@@ -261,44 +226,46 @@ form {
 
   select, option, input, textarea {
     background: #fffffa;
-    border: 1px solid #aaa;
+    border: .1rem solid #aaa;
     padding: .6rem;
     width: 100%;
   }
 }
-textarea{
+
+textarea {
   resize: vertical;
 }
-.btn-close[class] {
-  background: #e2e2e2;
-  color: #222;
-}
 
-.overlay {
-  @extend %pos-fix;
-  background: #0008;
-  height: 100dvh;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity .3s;
+img[alt="Express"] {
+  filter: drop-shadow(0 0 .3rem rgba(0, 0, 0, .4));
 }
-
 body[class*="active-modal-"] .overlay {
   z-index: 9;
   pointer-events: auto;
   opacity: 1;
 }
 
-.center {
-  text-align: center;
-  margin-top: 5rem;
+
+section[id] {
+  padding: 7rem 0;
+  position: relative;
+  // overflow: hidden;
+
+  &.dark {
+    color: $text-color-dark;
+    background: linear-gradient(45deg, $bg-color-dark, lighten($bg-color-dark, 2%));
+  }
+
+  color: $text-color;
+  background: $bg-color;
 }
 
-@keyframes anim-btn {
-  50% {
-    left: 0;
+.dark {
+  .like-p, p {
+    color: #999
   }
-  100% {
-    left: 150%;
-  }
+}
+
+.dark h2::after {
+  filter: invert(100%);
 }

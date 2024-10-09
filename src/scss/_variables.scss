@@ -1,10 +1,20 @@
-$color-1: #1d1e22;
+$color-1: #1a1e2c; //#1d1e22;
 $color-2: #fafafa;
 $color-3: #232429;
 
+$bg-dark: linear-gradient(45deg, #1a1e2c, #1e2232);
+$anim-func: cubic-bezier(0,.55,.45,1);
+
+//#CCFF90
+//#8BC34A
+//#1B5E20
+
+//#3F51B5
 
 $text-color: #fafafa;
 $brand-color: #f17938;
+$brand-color-2: #ff7854;
+$text-color-gray: #999;
 
 // light:
 $text-color: $color-1;
@@ -17,18 +27,19 @@ $bg-color-dark: $color-1;
 
 $secondary-text: #fff;
 
-$gradient: linear-gradient(to right, #ff7854 0%,#fb9eca 52%,#a46cf9 100%);
+//$gradient: linear-gradient(to right, #ff7854 0%,#fb9eca 52%,#a46cf9 100%);
+$gradient-2: linear-gradient(to right, #ff7854 0%,#f17938  100%);
 //linear-gradient(90deg, oklch(0.7 0.15 348), oklch(0.7 0.15 306));
 
 
 
 $font-header: Murecho, sans-serif;
-$font-main: Open Sans, sans-serif;
+$font-main: Montserrat, sans-serif;
 
 
 $width-mob: 980px;
-$font-s: 1rem;
+$font-xs: 1.7rem;
+$font-s: 1.8rem;
 $font-m: 2rem;
 $font-l: 2.4rem;
 $font-xl: 2.7rem;
-$font-xxl: 3.7rem;
