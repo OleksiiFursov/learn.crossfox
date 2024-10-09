@@ -263,6 +263,7 @@ $each('#start .card', ((el, index)=>{
 	let angel = -70, direction = false;
 	let step = Math.random()*0.6;
 	setInterval(()=>{
+		//el.style.backgroundImage = 'linear-gradient('+angel+'deg, #232429 10%, '+colors[index]+' 90%)';
 		el.style.backgroundImage = 'linear-gradient('+angel+'deg, #232429 80%, '+colors[index]+' 30%)';
 
 		if(angel === 50){
