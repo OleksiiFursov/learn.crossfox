@@ -17,7 +17,7 @@
     line-height: 1.25;
     text-transform: uppercase;
 
-    .orange {
+    .watchword {
       color: $brand-color;
     }
   }
@@ -38,7 +38,7 @@
       //border-left: .3rem solid #6b6b6b;
       padding: 2.5rem 3rem;
       color: #f89f73;
-    //  background: linear-gradient(-327deg, #1e2231, #3a4568, #6b7597);
+      //  background: linear-gradient(-327deg, #1e2231, #3a4568, #6b7597);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -46,9 +46,89 @@
       //border-top-right-radius: 2rem;
       //border-bottom-right-radius: 2rem;
       box-shadow: .2rem 0 .4rem .1rem #262a3c;
+
       > * {
         display: flex;
         justify-content: space-between;
+      }
+    }
+  }
+}
+
+#why-our {
+  .title {
+    text-align: left;
+    margin-left: 0;
+    margin-bottom: 4rem;
+  }
+
+  .list {
+    gap: 4rem;
+    display: flex;
+    flex-direction: column;
+
+    .item {
+      border-left: .1rem solid #262a3c;
+      padding: 2rem 2rem 3rem 4rem;
+
+      > div {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+      }
+
+      img {
+        width: 4rem;
+        margin-top: .2rem;
+      }
+
+      h2 {
+        line-height: 1.2;
+        text-align: left;
+        margin: 0;
+
+        color: $text-color;
+      }
+    }
+  }
+}
+
+#comment {
+  h2{
+    text-align: left;
+    margin-left: 0;
+    span{
+      color: $text-color-dark;
+      display: block;
+      margin-top: 0.5rem;
+    }
+  }
+  .video-box {
+
+  }
+
+  .item {
+    background: #232429;
+    box-shadow: .2rem 0 .4rem .1rem #262a3c;
+    padding: 3.5rem 2rem 5rem 3rem;
+
+    .item-about {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 3rem;
+      .pro {
+      }
+
+      .name {
+        color: $text-color-gray;
+        margin-right: 2rem;
+      }
+    }
+    .video{
+      width: 100%;
+      >*{
+        width: 100%;
       }
     }
   }
