@@ -8,8 +8,8 @@ export default format({
 	LANG: 'ru',
 
 	// COMPANY:
-	COMPANY_NAME: 'Mentor.Crossfox',
-	COMPANY_NAME_SHORT: 'Mentor CF',
+	COMPANY_NAME: 'Обучение с Crossfox',
+	COMPANY_NAME_SHORT: 'Learn CF',
 	COMPANY_DESCRIPTION: 'Освой программирование быстро и качественно с личным ментором. Индивидуальный подход. Front-end | Back-end',
 	OPENING_HOURS: 'Mo,Tu,We,Th,Fr,Sa,Su',
 	DAY_OF_WEEK: 'Monday","Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday', // first and last " not require

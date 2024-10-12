@@ -267,7 +267,7 @@ $each('#start .card', ((el, index)=>{
 	setInterval(()=>{
 		//el.style.backgroundImage = 'linear-gradient('+angel+'deg, #232429 10%, '+colors[index]+' 90%)';
 
-		el.style.backgroundImage = 'linear-gradient('+angel+'deg, #232429 80%, '+colors[index]+' 30%)';
+		el.style.backgroundImage = 'linear-gradient('+angel+'deg, #232429 80%, '+colors[index]+' 20%)';
 
 		if(angel < 150){
 			direction = false;
