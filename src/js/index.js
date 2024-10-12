@@ -212,7 +212,13 @@ $e(window, 'load', () => {
 	clearTimeout(preloaderText);
 	bc.add('loaded');
 	if (isMob) {
-
+		new Swiper('.swiper', {
+			spaceBetween: rwd(15, 20),
+		//	autoplay: true,
+			centeredSlides: true,
+			slidesPerView: 1.2,
+			loop: true,
+		});
 	}
 	setTimeout(() => {
 		animAfter('.header', theLoaded)
@@ -257,6 +263,8 @@ vAnim('.anim-zoom-collection', root => {
 // }, 7000)
 
 bc.add('js');
+
+$each('#review')
 
 const colors  = ['#f4824a', '#fb4c4c', '#3c53d3'];
 const angels = [150, ]

@@ -82,11 +82,12 @@ $header-burger-radius: 6rem;
   transition: 0.7s ease;
   transform: translateX(200.1%);
   padding-left: 8rem;
+  font-size: $font-xl;
   @include isDesktop{
     padding-left: 10rem;
     padding-right: 10rem;
   }
-  font-size: $font-xl;
+
   li{
     padding: 2rem 0;
     border-bottom: .1rem solid #ddd;

@@ -24,12 +24,11 @@ html {
 
 body {
   font: 400 185%/1.5 $font-main;
+  display: flex;
+  flex-direction: column;
   @include isDesktop {
     font-size: 170%;
   }
-  display: flex;
-  flex-direction: column;
-
 }
 
 img{
@@ -37,21 +36,22 @@ img{
 }
 .container {
   width: 90%;
+  margin-left: auto;
+  margin-right: auto;
   @include isDesktop {
     width: 85%;
   }
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .container-2{
   width: 90%;
-  @include isDesktop {
-    width: 65%;
-  }
   max-width: 100rem;
   margin-left: auto;
   margin-right: auto;
+  @include isDesktop {
+    width: 65%;
+  }
+
 }
 
 
@@ -158,6 +158,10 @@ main {
 }
 section[class*='modal-'] {
   position: fixed;
+  background: #fff;
+  z-index: 9;
+  transition: .4s;
+  padding: 2rem 0;
   @include isMobile {
     bottom: 0;
     left: 0;
@@ -172,10 +176,7 @@ section[class*='modal-'] {
     transform: translate(-50%, -50%);
     border-radius: 3rem 3rem;
   }
-  background: #fff;
-  z-index: 9;
-  transition: .4s;
-  padding: 2rem 0;
+
 }
 body:not(.active-modal-ask) .modal-ask, body:not(.active-modal-consultant) .modal-consultant, body:not(.active-modal-roadmap) .modal-roadmap {
   @include isMobile {
@@ -198,11 +199,12 @@ h2:not([class*="like-"]) {
   text-align: center;
   width: fit-content;
   margin: -.1rem auto 4rem;
+  color: $brand-color-2;
+  position: relative;
   @include isDesktop {
     margin-bottom: 6rem;
   }
-  color: $brand-color-2;
-  position: relative;
+
 }
 
 
@@ -253,7 +255,7 @@ section[id] {
 
   &.dark {
     color: $text-color-dark;
-    background: linear-gradient(45deg, $bg-color-dark, lighten($bg-color-dark, 2%));
+    background: linear-gradient(45deg, $bg-color-dark, adjust-color($bg-color-dark, $lightness: 2%));
   }
 
   color: $text-color;

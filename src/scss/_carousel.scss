@@ -52,13 +52,14 @@ section.dark .carousel{
       &[alt="Express"]{
         filter: drop-shadow(0 0 .3rem rgba(0,0,0,.4));
       }
+      width: 7.5rem;
+      height: 7.5rem;
       @include isMobile {
         width: 6rem;
         height: 6rem;
         //margin-bottom: 3rem;
       }
-      width: 7.5rem;
-      height: 7.5rem;
+
     }
   }
 }

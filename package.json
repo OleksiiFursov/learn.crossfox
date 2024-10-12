@@ -54,6 +54,7 @@
 		"last 5 versions"
 	],
 	"dependencies": {
-		"@crossfox/css-start": "^1.0.13"
+		"@crossfox/css-start": "^1.0.13",
+		"gulp-group-css-media-queries": "^1.2.2"
 	}
 }

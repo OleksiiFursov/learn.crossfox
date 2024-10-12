@@ -1,5 +1,4 @@
-const priceI90M = 47;
-export const GOOGLE_ANALYTICS = 'G-1L49K9TX2N'
+const priceI60M = 35;
 
 export default format({
 	TITLE: 'Индивидуальное обучение веб-программированию',
@@ -8,8 +7,8 @@ export default format({
 	LANG: 'ru',
 
 	// COMPANY:
-	COMPANY_NAME: 'Обучение с Crossfox',
-	COMPANY_NAME_SHORT: 'Learn CF',
+	COMPANY_NAME: 'Mentor.Crossfox',
+	COMPANY_NAME_SHORT: 'Mentor CF',
 	COMPANY_DESCRIPTION: 'Освой программирование быстро и качественно с личным ментором. Индивидуальный подход. Front-end | Back-end',
 	OPENING_HOURS: 'Mo,Tu,We,Th,Fr,Sa,Su',
 	DAY_OF_WEEK: 'Monday","Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday', // first and last " not require
@@ -21,6 +20,7 @@ export default format({
 	EMAIL: 'alex@crossfox.online',
 	PHONE: '<a href="tel:123456789">+1 234 567 89</a>',
 	TELEGRAM: 'crossfox_online',
+	INSTA: 'crossfox.learn',
 	AUTHOR: 'Oleksii Fursov',
 
 	//DESIGNED:
@@ -30,28 +30,30 @@ export default format({
 	// SERVER:
 	FOLDER_BUILD: './build',
 	FOLDER_SOURCE: './src',
+	FOLDER_COPY: ['vendor'],
 	SERVER_OPEN: false,//'external',
 	HTTPS: true,
 	PORT: 777,
 	TUNNEL: false,
 
-	// HOOK
-	HEADER_ADDONS: '<script async src="https://www.googletagmanager.com/gtag/js?id='+GOOGLE_ANALYTICS+'"></script>\n',
+	GOOGLE_ANALYTICS: 'G-1L49K9TX2N',
+
 	GROUP_MEMBERS: 5,
 	GROUP2_MEMBERS: 10,
 
-	PRICE_I_45M: priceI90M/2*1.25,
-	PRICE_I_90M: priceI90M,
-	PRICE_I_4_90: priceI90M*4 * .9,
-	PRICE_I_8_90: priceI90M*8 * .85,
+	PRICE_C_30M: priceI60M/2*1.35,
+	PRICE_C_60M: priceI60M*0.95,
+	PRICE_CK_45M: priceI60M*1.1,
+	PRICE_T_30M: priceI60M,
 
-	PRICE_C_30M: priceI90M/3*1.3,
-	PRICE_CK_45M: priceI90M/2*1.1 ,
-	PRICE_C_60M: priceI90M/1.5*.95,
-	PRICE_C_120M: priceI90M*1.25*.75,
-	PRICE_PM: priceI90M*4*1.06,
-	PRICE_T_30M: priceI90M/3*1.5,
-	PRICE_P_60M: priceI90M/1.5*1.25
+	PRICE_I_30M: priceI60M/2*1.5,
+	PRICE_I_60M: priceI60M,
+	PRICE_I_4_60: priceI60M*4 * .9,
+	PRICE_I_8_60: priceI60M*8 * .85,
+
+
+	PRICE_PM: priceI60M*6,
+	PRICE_P_60M: priceI60M*1.15
 })
 
 

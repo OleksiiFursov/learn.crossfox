@@ -19,10 +19,24 @@ export const generateFonts = () =>
       .pipe(changed(getBuildDir('fonts/')))
       .pipe(gulp.dest(getBuildDir('fonts/')))
 
-export const generateFiles = () =>
-  gulp.src(getSrcDir('files/**/*'), { encoding: false })
-      .pipe(changed(getBuildDir('files/')))
-      .pipe(gulp.dest(getBuildDir('files/')))
+
+export const generateFiles = async () => {
+	const tasks = [];
+
+	for (const folder of config.FOLDER_COPY) {
+		tasks.push(async () => {
+			return new Promise((resolve, reject) => {
+				gulp.src(getSrcDir(folder + '/**/*'), { encoding: false })
+					.pipe(changed(getBuildDir(folder + '/')))
+					.pipe(gulp.dest(getBuildDir(folder + '/')))
+					.on('end', resolve)
+					.on('error', reject);
+			});
+		});
+	}
+
+	await Promise.all(tasks.map(task => task()));
+}
 
 export const movePWA = () =>
   gulp.src(['*.png', '*.ico', '.*.webmanifest'].map(getSrcDir))
