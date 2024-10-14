@@ -1,0 +1,136 @@
+@@include('../part/header.html', {title: "@@TITLE", description: "@@COMPANY_DESCRIPTION"})
+<main>
+    <section class="dark" id="start">
+        <div class="container">
+            <h1>
+                Курс
+                <span class="watchword nowrap">Frontend разработчик</span>
+                <br/>
+                <span class="nowrap">с нуля</span>
+                <span class="nowrap">до трудоустройства</span>
+            </h1>
+            <p>Получите востребованную творческую профессию в IT</p>
+            <button>Записаться на курс</button>
+        </div>
+    </section>
+    <section id="numbers">
+        <div class="container">
+            <ul class="list">
+                <li class="item">Средняя зарплата frontend разработчика </li>
+                <li class="item">В мире более 200млн бизнесов и каждому нужен свой собственный сайт</li>
+                <li class="item"></li>
+            </ul>
+        </div>
+    </section>
+    <section id="about-pro">
+        <div class="container">
+            <img src="" alt="">
+            <div class="text-box"></div>
+        </div>
+    </section>
+    <section id="positive-sign">
+        <div class="container">
+            <ul class="list">
+                <li class="item"></li>
+                <li class="item"></li>
+                <li class="item"></li>
+                <li class="item"></li>
+            </ul>
+        </div>
+    </section>
+    <section id="why-pro">
+        <div class="container">
+            <h2>Почему Frontend?</h2>
+            <ul class="list">
+                <li class="item">
+                    <h3>Востребованная профессия на рынке</h3>
+                </li>
+                <li class="item">
+                    Возможность работать удаленно
+                </li>
+                    Креативная профессия
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="help">
+        <div class="container">
+            
+        </div>
+    </section>
+    <section id="to-whom">
+
+    </section>
+    <section id="about-us">
+
+    </section>
+</main>
+
+<div class="overlay"></div>
+<section class="modal-ask">
+    <div class="container">
+        <h2>Задать вопрос</h2>
+        <form>
+            <label>
+                <b>Ваше имя</b>
+                <input type="text" name="name" required/>
+            </label>
+
+            <label>
+                <b>Способ связи</b>
+                <select name="contact-type">
+                    <option>Telegram</option>
+                    <option>Instagram</option>
+                    <option>Discord</option>
+                    <option>Email</option>
+                    <option>Телефон</option>
+                </select>
+            </label>
+            <label class="fx-change-contact-type">
+                <b>Контакт</b>
+                <input type="text" name="contact-value" required/>
+            </label>
+            <label>
+                <b>Вопрос</b>
+                <textarea rows="3" name="msg" required></textarea>
+            </label>
+            <div class="msg"></div>
+            <div class="action">
+                <button type="button" class="fx-modal-close btn-close">Отмена</button>
+                <button class="fx-modal-send btn-send btn-clicker" name="submit" disabled>Отправить</button>
+            </div>
+        </form>
+    </div>
+</section>
+<section class="modal-consultant">
+    <div class="container">
+        <h2>Задать вопрос</h2>
+        <form>
+            <label>
+                <b>Ваше имя</b>
+                <input type="text" name="name" required/>
+            </label>
+
+            <label>
+                <b>Способ связи</b>
+                <select name="contact-type">
+                    <option>Telegram</option>
+                    <option>Instagram</option>
+                    <option>Discord</option>
+                    <option>Email</option>
+                    <option>Телефон</option>
+                </select>
+            </label>
+            <label class="fx-change-contact-type">
+                <b>Контакт</b>
+                <input type="text" name="contact-value" required/>
+            </label>
+            <div class="msg"></div>
+            <div class="action">
+                <button type="button" class="fx-modal-close btn-close">Отмена</button>
+                <button class="fx-modal-send btn-send btn-clicker" name="submit" disabled>Отправить</button>
+            </div>
+        </form>
+    </div>
+</section>
+@@include("../part/footer.html")

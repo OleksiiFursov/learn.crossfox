@@ -4,7 +4,8 @@
 @import "swiper";
 @import "decoration";
 
-#start {
+
+#start{
   position: relative;
   display: flex;
   align-items: center;
@@ -27,7 +28,6 @@
     margin: 0;
     color: #fff;
   }
-
   .cards {
     display: flex;
     flex-direction: column;
@@ -54,6 +54,9 @@
     }
   }
 }
+
+
+
 
 #why-our {
   .title {
