@@ -1,6 +1,6 @@
-@@include('../part/header.html', {title: "@@TITLE", description: "@@COMPANY_DESCRIPTION"})
+@@include('../part/header.html', {title: "@@TITLE", description: "@@COMPANY_DESCRIPTION", class: 'page'})
 <main>
-    <section class="dark" id="start">
+    <section class="dark subpage-1" id="start">
         <div class="container">
             <h1>
                 Курс
@@ -9,6 +9,11 @@
                 <span class="nowrap">с нуля</span>
                 <span class="nowrap">до трудоустройства</span>
             </h1>
+            <div class="tags">
+                <div><strong>Стартует</strong> скоро</div>
+                <div><strong>Стоимость</strong>  120 &euro;/мес</div>
+                <div><strong>Длительность</strong> 9 мес.</div>
+            </div>
             <p>Получите востребованную творческую профессию в IT</p>
             <button>Записаться на курс</button>
         </div>
@@ -24,10 +29,14 @@
     </section>
     <section id="about-pro">
         <div class="container">
-            <img src="" alt="">
-            <div class="text-box">
-                <h2>Лицо интернета - это frontend</h2>
-                <p>Вся визуальная часть любого сайта или приложения это заслуга frontend разработчиков</p>
+            <h2>Причины обучатся Javascript</h2>
+            <div class="box">
+                <img class="anim-zoom-item" src="https://www.statista.com/statistics/793628/worldwide-developer-survey-most-used-languages/" alt="">
+                <ul class="list">
+                    <li>Наиболее используемые языки программирования среди разработчиков во всем мире по состоянию на 2024 год</li>
+                    <li>Высокий спрос на рынке труда</li>
+                    <li>Быстрый старт в карьере</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -36,24 +45,24 @@
             <h2>Почему мы?</h2>
             <ul class="list">
                 <li class="item">
-                    <img src="" alt="">
-                    <h3>Эффективная программа обучения</h3>
+                    <img class="anim-zoom-item" src="" alt="">
+                    <h3>Полностью удаленное обучение</h3>
                 </li>
                 <li class="item">
-                    <img src="" alt="">
-                    <h3>Больше 11 лет опыта обучения</h3>
+                    <img class="anim-zoom-item" src="" alt="">
+                    <h3>Программа рассчитана на 2025 год+</h3>
                 </li>
                 <li class="item">
-                    <img src="" alt="">
-                    <h3>Возможность совмещать с работой и личными делами</h3>
+                    <img class="anim-zoom-item" src="" alt="">
+                    <h3>Портфолио коммерческого уровня</h3>
                 </li>
                 <li class="item">
-                    <img src="" alt="">
-                    <h3>Реальные проекты</h3>
+                    <img class="anim-zoom-item" src="" alt="">
+                    <h3>Специальная авторская методика</h3>
                 </li>
                 <li class="item">
-                    <img src="" alt="">
-                    <h3>Профессиональное и конкурентно способное портфолио</h3>
+                    <img class="anim-zoom-item" src="" alt="">
+                    <h3>Обучение</h3>
                 </li>
             </ul>
         </div>
@@ -70,6 +79,7 @@
                     <h3>Возможность работать удаленно</h3>
                     <p>Ты сможешь работать с любой точки мира, сидя дома или просто в теплом офисе с чашкой ароматного кофе</p>
                 </li>
+                <li>
                     <h3>Креативная профессия</h3>
                     <p>Мечтал реализовать одну идею тысячами способами? Тут есть такая возможность. Только от тебя будет зависеть как будет работать и выглядеть сайт</p>
                 </li>
@@ -80,6 +90,30 @@
         <div class="container">
             
         </div>
+    </section>
+    <section id="skills">
+        <div class="container">
+            <h2>Чему вы научитесь на курсе</h2>
+            <div class="tech-anim">
+                <img class="anim-zoom-item" src="/img/tech/html.svg" alt="HTML"/>
+                <img class="anim-zoom-item" src="/img/tech/css.svg" alt="CSS"/>
+                <img class="anim-zoom-item" src="/img/tech/sass.svg" alt="Sass"/>
+                <img class="anim-zoom-item" src="/img/tech/javascript.svg" alt="Javascript"/>
+                <img class="anim-zoom-item" src="/img/tech/typescript.svg" alt="Typescript"/>
+                <img class="anim-zoom-item" src="/img/tech/websocket.svg" alt="Websocket"/>
+                <img class="anim-zoom-item" src="/img/tech/vue.svg" alt="Vue"/>
+                <img class="anim-zoom-item" src="/img/tech/react.svg" alt="React"/>
+                <img class="anim-zoom-item" src="/img/tech/git.svg" alt="Git"/>
+                <img class="anim-zoom-item" src="/img/tech/jquery.svg" alt="Jquery"/>
+                <img class="anim-zoom-item" src="/img/tech/bootstrap.svg" alt="Bootstrap"/>
+                <img class="anim-zoom-item" src="/img/tech/reduxsaga.svg" alt="Reduxsaga"/>
+                <img class="anim-zoom-item" src="/img/tech/mui.svg" alt="Mui"/>
+                <img class="anim-zoom-item" src="/img/tech/antd.svg" alt="Antd"/>
+                <img class="anim-zoom-item" src="/img/tech/svg.svg" alt="SVG"/>
+                <img class="anim-zoom-item" src="/img/tech/vite.svg" alt="Vite"/>
+            </div>
+        </div>
+
     </section>
     <section id="to-whom">
 
@@ -125,6 +159,23 @@
         </form>
     </div>
 </section>
+<div>
+<!--    Преймущество:-->
+<!--    - Полностью удаленное обучение.-->
+<!--    - Программа рассчитана на 2025 год+ ( Технологии, какие будут востребованы в следующем году)-->
+<!--    - Портфолио коммерческого уровня-->
+<!--    - Специальная авторская методика-->
+<!--    - Обучение-->
+
+
+<!--    Причины обучатся Javascript-->
+<!--    1. Наиболее используемые языки программирования среди разработчиков во всем мире по состоянию на 2024 год-->
+<!--    https://www.statista.com/statistics/793628/worldwide-developer-survey-most-used-languages/-->
+
+<!--    2. Высокий спрос на рынке труда-->
+<!--    3. Быстрый старт в карьере-->
+<!--    4-->
+</div>
 <section class="modal-consultant">
     <div class="container">
         <h2>Задать вопрос</h2>

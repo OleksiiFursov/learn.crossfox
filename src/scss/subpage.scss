@@ -1,0 +1,101 @@
+.subpage-1{
+  .tags{
+    display: flex;
+    gap: 2rem;
+    div{
+      border-radius: $border-radius;
+      padding: .5rem 1rem;
+      flex-grow: 1;
+      border: .2rem solid $brand-color;
+    }
+  }
+}
+
+.tech-anim{
+  height: 50rem;
+  position: relative;
+
+  img{
+    position: absolute;
+    max-width: 3rem;
+    &[alt="HTML"]{
+      top:50%;
+      left:50%;
+      transform: scale(1.8);
+    }
+    &[alt="CSS"]{
+      top:65%;
+      left:80%;
+      transform: scale(1.6);
+    }
+    &[alt="Javascript"]{
+      top:30%;
+      left:60%;
+      transform: scale(2);
+    }
+    &[alt="Sass"]{
+      top:70%;
+      left:30%;
+      transform: scale(1.5);
+    }
+    &[alt="Typescript"]{
+      top:10%;
+      left:80%;
+      transform: scale(1.4);
+    }
+    &[alt="React"]{
+      top:30%;
+      left:30%;
+      transform: scale(1.7);
+    }
+    &[alt="Vue"]{
+      top:7%;
+      left:40%;
+      transform: scale(1.6);
+    }
+    &[alt="Git"]{
+      top:40%;
+      left:90%;
+      transform: scale(1.3);
+    }
+    &[alt="Jquery"]{
+      top:84%;
+      left:58%;
+      transform: scale(1.1);
+    }
+    &[alt="Bootstrap"]{
+      top:70%;
+      left:30%;
+      transform: scale(1.2);
+    }
+    &[alt="Vite"]{
+      top:50%;
+      left:15%;
+      transform: scale(1.3);
+    }
+    &[alt="Mui"]{
+      top:80%;
+      left:5%;
+      transform: scale(0.9);
+    }
+    &[alt="Antd"]{
+      top:36%;
+      left:0;
+    }
+    &[alt="Reduxsaga"]{
+      top:98%;
+      left:84%;
+      transform: scale(0.9);
+    }
+    &[alt="Websocket"]{
+      top:13%;
+      left:10%;
+    }
+    &[alt="SVG"]{
+      top:97%;
+      left:30%;
+      transform: scale(0.9);
+    }
+
+  }
+}
