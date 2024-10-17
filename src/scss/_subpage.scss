@@ -1,3 +1,4 @@
+@import "variables";
 .subpage-1{
   .tags{
     display: flex;
@@ -10,6 +11,85 @@
     }
   }
 }
+
+#positive-sign{
+  .list{
+    .item{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2.5rem 3rem;
+      >h2{
+        text-align: left;
+        margin: 0 0 1rem 0;
+        line-height: 1.25;
+      }
+      &:nth-child(1){
+        grid-area: a;
+        margin-left: 5rem;
+      //  Групповое менторство
+      }
+      &:nth-child(2){
+        grid-area: b;
+        background: $brand-color;
+        // Полностью удаленное обучение
+        h2{
+          color: $text-color-dark;
+        }
+      }
+      &:nth-child(3){
+        grid-area: c;
+        background: $bg-dark;
+        color: $text-color-dark;
+        padding: 4rem 3rem;
+        // 1 занятие в неделю с ментором 1 на 1
+      }
+      &:nth-child(4){
+        grid-area: d;
+        background: $brand-color;
+        // Портфолио коммерческого уровня
+        h2{
+          color: $text-color-dark;
+        }
+      }
+      &:nth-child(5){
+        // Специальная авторская методика
+        grid-area: e;
+      }
+      &:nth-child(6){
+        // Программа рассчитана на 2025 год+
+        grid-area: f;
+        border: 1px solid $brand-color;
+      }
+      &:nth-child(7){
+        // Обучение до 7 человек в группе
+        grid-area: g;
+        background: $bg-dark;
+        color: $text-color-dark;
+        h2{
+          color: $text-color-dark;
+        }
+      }
+      &:nth-child(8){
+        // Интерактивный способ обучения
+        grid-area: h;
+        padding: 4rem 3rem;
+        background: $bg-dark;
+        color: $text-color-dark;
+      }
+    }
+    display: grid;
+    gap: 3rem;
+    grid-template-areas:
+            "a a b"
+            "c c c "
+            "d e e"
+            "f f g"
+            "h h h";
+  }
+}
+
+
 
 .tech-anim{
   height: 50rem;
