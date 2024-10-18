@@ -1,9 +1,12 @@
 @import "variables";
-.subpage-1{
-  .tags{
+
+.subpage-1 {
+  .tags {
     display: flex;
     gap: 2rem;
-    div{
+    max-width: 80rem;
+    margin-bottom: 2rem;
+    div {
       border-radius: $border-radius;
       padding: .5rem 1rem;
       flex-grow: 1;
@@ -12,145 +15,191 @@
   }
 }
 
-#positive-sign,#positive-sign-dark{
-  h2{
+#positive-sign {
+  h2 {
     text-align: left;
     margin: 0;
   }
-  .list-head{
+
+  .list-head {
     margin-bottom: 3rem;
-    h2{
+
+    h2 {
       margin-bottom: 1rem;
     }
   }
-  .list{
+
+  .list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    .item{
+
+    .item {
       padding: 3rem;
-      h2{
+      display: flex;
+      align-items: flex-start;
+      gap: 2.5rem;
+
+      img {
+        min-width: 5rem;
+      }
+
+      h2 {
         font-size: 2rem;
         margin-bottom: 1rem;
       }
-      &:nth-child(1){
+
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      &:nth-child(1) {
         border: .1rem solid $text-color;
       }
-      &:nth-child(2){
+
+      &:nth-child(2) {
         background: $bg-dark;
         color: $text-color-dark;
       }
-      &:nth-child(4){
+
+      &:nth-child(4) {
         border: .1rem solid $text-color;
       }
-      &:nth-child(3){
+
+      &:nth-child(3) {
         background: $bg-dark;
         color: $text-color-dark;
       }
     }
   }
 }
-#positive-sign-dark{
-  .list{
-    .item{
-      &:nth-child(1){
-        border: .1rem solid $text-color-dark;
-      }
-      &:nth-child(2){
-        border: .1rem solid $text-color-dark;
 
-      }
-      &:nth-child(3){
-      }
+#positive-sign-dark {
+  h2 {
+    text-align: left;
+    margin: 0;
+  }
+
+  .list-head {
+    margin-bottom: 3rem;
+
+    h2 {
+      margin-bottom: .5rem;
+    }
+  }
+
+  .tags {
+    display: flex;
+    gap: 2rem;
+
+    > div {
+      border-radius: $border-radius;
+      padding: .5rem 1rem;
+      border: .2rem solid $brand-color;
     }
   }
 }
 
 
-
-.tech-anim{
+.tech-anim {
   height: 50rem;
   position: relative;
 
-  img{
+  img {
     position: absolute;
     max-width: 3rem;
-    &[alt="HTML"]{
-      top:50%;
-      left:50%;
+
+    &[alt="HTML"] {
+      top: 50%;
+      left: 50%;
       transform: scale(1.8);
     }
-    &[alt="CSS"]{
-      top:65%;
-      left:80%;
+
+    &[alt="CSS"] {
+      top: 65%;
+      left: 80%;
       transform: scale(1.6);
     }
-    &[alt="Javascript"]{
-      top:30%;
-      left:60%;
+
+    &[alt="Javascript"] {
+      top: 30%;
+      left: 60%;
       transform: scale(2);
     }
-    &[alt="Sass"]{
-      top:70%;
-      left:30%;
+
+    &[alt="Sass"] {
+      top: 70%;
+      left: 30%;
       transform: scale(1.5);
     }
-    &[alt="Typescript"]{
-      top:10%;
-      left:80%;
+
+    &[alt="Typescript"] {
+      top: 10%;
+      left: 80%;
       transform: scale(1.4);
     }
-    &[alt="React"]{
-      top:30%;
-      left:30%;
+
+    &[alt="React"] {
+      top: 30%;
+      left: 30%;
       transform: scale(1.7);
     }
-    &[alt="Vue"]{
-      top:7%;
-      left:40%;
+
+    &[alt="Vue"] {
+      top: 7%;
+      left: 40%;
       transform: scale(1.6);
     }
-    &[alt="Git"]{
-      top:40%;
-      left:90%;
+
+    &[alt="Git"] {
+      top: 40%;
+      left: 90%;
       transform: scale(1.3);
     }
-    &[alt="Jquery"]{
-      top:84%;
-      left:58%;
+
+    &[alt="Jquery"] {
+      top: 84%;
+      left: 58%;
       transform: scale(1.1);
     }
-    &[alt="Bootstrap"]{
-      top:70%;
-      left:30%;
+
+    &[alt="Bootstrap"] {
+      top: 70%;
+      left: 30%;
       transform: scale(1.2);
     }
-    &[alt="Vite"]{
-      top:50%;
-      left:15%;
+
+    &[alt="Vite"] {
+      top: 50%;
+      left: 15%;
       transform: scale(1.3);
     }
-    &[alt="Mui"]{
-      top:80%;
-      left:5%;
+
+    &[alt="Mui"] {
+      top: 80%;
+      left: 5%;
       transform: scale(0.9);
     }
-    &[alt="Antd"]{
-      top:36%;
-      left:0;
+
+    &[alt="Antd"] {
+      top: 36%;
+      left: 0;
     }
-    &[alt="Reduxsaga"]{
-      top:98%;
-      left:84%;
+
+    &[alt="Reduxsaga"] {
+      top: 98%;
+      left: 84%;
       transform: scale(0.9);
     }
-    &[alt="Websocket"]{
-      top:13%;
-      left:10%;
+
+    &[alt="Websocket"] {
+      top: 13%;
+      left: 10%;
     }
-    &[alt="SVG"]{
-      top:97%;
-      left:30%;
+
+    &[alt="SVG"] {
+      top: 97%;
+      left: 30%;
       transform: scale(0.9);
     }
 
