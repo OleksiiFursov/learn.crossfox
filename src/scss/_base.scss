@@ -199,7 +199,9 @@ h2:not([class*="like-"]) {
   text-align: center;
   width: fit-content;
   margin: -.1rem auto 4rem;
-  color: $brand-color-2;
+  span{
+    color: $brand-color-2;
+  }
   position: relative;
   @include isDesktop {
     margin-bottom: 6rem;
@@ -215,6 +217,9 @@ h3 {
   font-size: $font-m;
 }
 
+li{
+  list-style: none;
+}
 
 form {
   display: flex;

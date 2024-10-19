@@ -1,9 +1,12 @@
 @import "variables";
-.subpage-1{
-  .tags{
+
+.subpage-1 {
+  .tags {
     display: flex;
     gap: 2rem;
-    div{
+    max-width: 80rem;
+    margin-bottom: 2rem;
+    div {
       border-radius: $border-radius;
       padding: .5rem 1rem;
       flex-grow: 1;
@@ -12,168 +15,218 @@
   }
 }
 
-#positive-sign{
-  .list{
-    .item{
+#positive-sign {
+  h2 {
+    text-align: left;
+    margin: 0;
+  }
+
+  .list-head {
+    margin-bottom: 3rem;
+
+    h2 {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+
+    .item {
+      padding: 3rem;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 2.5rem 3rem;
-      >h2{
-        text-align: left;
-        margin: 0 0 1rem 0;
-        line-height: 1.25;
+      align-items: flex-start;
+      gap: 2.5rem;
+
+      img {
+        min-width: 5rem;
       }
-      &:nth-child(1){
-        grid-area: a;
-        margin-left: 5rem;
-      //  Групповое менторство
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
       }
-      &:nth-child(2){
-        grid-area: b;
-        background: $brand-color;
-        // Полностью удаленное обучение
-        h2{
-          color: $text-color-dark;
-        }
+
+      h3 {
+        font-size: 1.5rem;
       }
-      &:nth-child(3){
-        grid-area: c;
-        background: $bg-dark;
-        color: $text-color-dark;
-        padding: 4rem 3rem;
-        // 1 занятие в неделю с ментором 1 на 1
+
+      &:nth-child(1), &:nth-child(4){
+        border: .1rem solid $text-color;
       }
-      &:nth-child(4){
-        grid-area: d;
-        background: $brand-color;
-        // Портфолио коммерческого уровня
-        h2{
-          color: $text-color-dark;
-        }
-      }
-      &:nth-child(5){
-        // Специальная авторская методика
-        grid-area: e;
-      }
-      &:nth-child(6){
-        // Программа рассчитана на 2025 год+
-        grid-area: f;
-        border: 1px solid $brand-color;
-      }
-      &:nth-child(7){
-        // Обучение до 7 человек в группе
-        grid-area: g;
-        background: $bg-dark;
-        color: $text-color-dark;
-        h2{
-          color: $text-color-dark;
-        }
-      }
-      &:nth-child(8){
-        // Интерактивный способ обучения
-        grid-area: h;
-        padding: 4rem 3rem;
+
+      &:nth-child(2), &:nth-child(3){
         background: $bg-dark;
         color: $text-color-dark;
       }
     }
-    display: grid;
-    gap: 3rem;
-    grid-template-areas:
-            "a a b"
-            "c c c "
-            "d e e"
-            "f f g"
-            "h h h";
+  }
+}
+
+#positive-sign-dark {
+  background: $bg-dark;
+  h2 {
+    text-align: left;
+    margin: 0;
+  }
+  .container{
+    display: flex;
+    flex-direction: row;
+  }
+  .animation{
+    width: 30rem;
+    position: relative;
+    div{
+      position: absolute;
+      &:nth-child(1){
+        bottom: -170%;
+        left: -80%;
+        width: 30rem;
+        height: 30rem;
+        background: $brand-color-2;
+        border-radius: 50%;
+      }
+      &:nth-child(2){
+        bottom: 70%;
+        left: 10%;
+        width: 5rem;
+        height: 5rem;
+        background: $brand-color-2;
+        border-radius: 50%;
+      }
+      &:nth-child(3){
+        bottom: 0%;
+        left: 40%;
+        width: 8rem;
+        height: 8rem;
+        background: $text-color-dark;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .list-head {
+    margin-bottom: 3rem;
+
+    h2 {
+      margin-bottom: .5rem;
+    }
+  }
+
+  .tags {
+    display: flex;
+    gap: 2rem;
+
+    > div {
+      border-radius: $border-radius;
+      padding: .5rem 1rem;
+      border: .2rem solid $brand-color;
+    }
   }
 }
 
 
-
-.tech-anim{
+.tech-anim {
   height: 50rem;
   position: relative;
 
-  img{
+  img {
     position: absolute;
     max-width: 3rem;
-    &[alt="HTML"]{
-      top:50%;
-      left:50%;
+
+    &[alt="HTML"] {
+      top: 50%;
+      left: 50%;
       transform: scale(1.8);
     }
-    &[alt="CSS"]{
-      top:65%;
-      left:80%;
+
+    &[alt="CSS"] {
+      top: 65%;
+      left: 80%;
       transform: scale(1.6);
     }
-    &[alt="Javascript"]{
-      top:30%;
-      left:60%;
+
+    &[alt="Javascript"] {
+      top: 30%;
+      left: 60%;
       transform: scale(2);
     }
-    &[alt="Sass"]{
-      top:70%;
-      left:30%;
+
+    &[alt="Sass"] {
+      top: 70%;
+      left: 30%;
       transform: scale(1.5);
     }
-    &[alt="Typescript"]{
-      top:10%;
-      left:80%;
+
+    &[alt="Typescript"] {
+      top: 10%;
+      left: 80%;
       transform: scale(1.4);
     }
-    &[alt="React"]{
-      top:30%;
-      left:30%;
+
+    &[alt="React"] {
+      top: 30%;
+      left: 30%;
       transform: scale(1.7);
     }
-    &[alt="Vue"]{
-      top:7%;
-      left:40%;
+
+    &[alt="Vue"] {
+      top: 7%;
+      left: 40%;
       transform: scale(1.6);
     }
-    &[alt="Git"]{
-      top:40%;
-      left:90%;
+
+    &[alt="Git"] {
+      top: 40%;
+      left: 90%;
       transform: scale(1.3);
     }
-    &[alt="Jquery"]{
-      top:84%;
-      left:58%;
+
+    &[alt="Jquery"] {
+      top: 84%;
+      left: 58%;
       transform: scale(1.1);
     }
-    &[alt="Bootstrap"]{
-      top:70%;
-      left:30%;
+
+    &[alt="Bootstrap"] {
+      top: 70%;
+      left: 30%;
       transform: scale(1.2);
     }
-    &[alt="Vite"]{
-      top:50%;
-      left:15%;
+
+    &[alt="Vite"] {
+      top: 50%;
+      left: 15%;
       transform: scale(1.3);
     }
-    &[alt="Mui"]{
-      top:80%;
-      left:5%;
+
+    &[alt="Mui"] {
+      top: 80%;
+      left: 5%;
       transform: scale(0.9);
     }
-    &[alt="Antd"]{
-      top:36%;
-      left:0;
+
+    &[alt="Antd"] {
+      top: 36%;
+      left: 0;
     }
-    &[alt="Reduxsaga"]{
-      top:98%;
-      left:84%;
+
+    &[alt="Reduxsaga"] {
+      top: 98%;
+      left: 84%;
       transform: scale(0.9);
     }
-    &[alt="Websocket"]{
-      top:13%;
-      left:10%;
+
+    &[alt="Websocket"] {
+      top: 13%;
+      left: 10%;
     }
-    &[alt="SVG"]{
-      top:97%;
-      left:30%;
+
+    &[alt="SVG"] {
+      top: 97%;
+      left: 30%;
       transform: scale(0.9);
     }
 
