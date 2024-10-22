@@ -6,6 +6,7 @@
     gap: 2rem;
     max-width: 80rem;
     margin-bottom: 2rem;
+
     div {
       border-radius: $border-radius;
       padding: .5rem 1rem;
@@ -53,11 +54,11 @@
         font-size: 1.5rem;
       }
 
-      &:nth-child(1), &:nth-child(4){
+      &:nth-child(1), &:nth-child(4) {
         border: .1rem solid $text-color;
       }
 
-      &:nth-child(2), &:nth-child(3){
+      &:nth-child(2), &:nth-child(3) {
         background: $bg-dark;
         color: $text-color-dark;
       }
@@ -67,20 +68,25 @@
 
 #positive-sign-dark {
   background: $bg-dark;
+
   h2 {
     text-align: left;
     margin: 0;
   }
-  .container{
+
+  .container {
     display: flex;
     flex-direction: row;
   }
-  .animation{
+
+  .animation {
     width: 30rem;
     position: relative;
-    div{
+
+    div {
       position: absolute;
-      &:nth-child(1){
+
+      &:nth-child(1) {
         bottom: -170%;
         left: -80%;
         width: 30rem;
@@ -88,7 +94,8 @@
         background: $brand-color-2;
         border-radius: 50%;
       }
-      &:nth-child(2){
+
+      &:nth-child(2) {
         bottom: 70%;
         left: 10%;
         width: 5rem;
@@ -96,7 +103,8 @@
         background: $brand-color-2;
         border-radius: 50%;
       }
-      &:nth-child(3){
+
+      &:nth-child(3) {
         bottom: 0%;
         left: 40%;
         width: 8rem;
@@ -127,6 +135,96 @@
   }
 }
 
+#where-used {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10rem;
+  }
+  .text-box{
+    margin-top: 5rem;
+    h2{
+      margin: 0 0 2rem 0;
+    }
+  }
+  .list {
+    display: flex;
+    width: 50%;
+    height: 30rem;
+    flex-direction: column;
+    gap: 4rem;
+    position: relative;
+    .item {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      &:nth-child(1){
+        left: 40%;
+        top: 0%;
+      }
+      &:nth-child(2){
+        left: 0%;
+        top: 40%;
+      }
+      &:nth-child(3){
+        left: 55%;
+        top: 50%;
+      }
+      &:nth-child(4){
+        left: 20%;
+        top: 95%;
+      }
+      h3 {
+        padding-bottom: 1rem;
+        border-bottom: .1rem solid $text-color;
+      }
+
+      img {
+        min-width: 5rem;
+        width: 5rem;
+      }
+    }
+    .item-span{
+      position: absolute;
+      left: 41%;
+      top: 55%;
+      .item-box{
+        position: relative;
+        span{
+          position: absolute;
+          display: block;
+          height: .1rem;
+          width: 5rem;
+          background: $text-color;
+          &:nth-child(1){
+            transform: rotate(-70deg);
+          }
+          &:nth-child(2){
+            transform: rotate(10deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+#about-pro{
+  .container{
+    display: flex;
+    gap: 10rem;
+  }
+  .box-img{
+    width: 55rem;
+  }
+  .box{
+    margin-top: 5rem;
+    h2{
+      margin: 0 0 2rem 0;
+    }
+  }
+}
 
 .tech-anim {
   height: 50rem;
