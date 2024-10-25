@@ -32,21 +32,45 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-
+    @include isDesktop{
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
     .card {
       min-height: 22rem;
       //border-left: .3rem solid #6b6b6b;
       padding: 2.5rem 3rem;
       color: #f89f73;
-      //  background: linear-gradient(-327deg, #1e2231, #3a4568, #6b7597);
+     // background:  linear-gradient(180deg, rgba(1,1,1,1) 0%, rgba(75,76,156,1) 60%, rgba(29,32,55,1) 94%);
+        background: linear-gradient(-327deg, #1e2231, #3a4568, #6b7597);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       border-radius: 2rem;
       //border-top-right-radius: 2rem;
       //border-bottom-right-radius: 2rem;
-      box-shadow: .2rem 0 .4rem .1rem #262a3c;
+      .card-top{
+        position: relative;
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          right:0;
+          top:0;
+          width: 3rem;
+          height: 2rem;
+          background: url('../img/arrows/arrow-left.svg') center right/3rem auto;
+        }
+      }
 
+
+      h3{
+        color: #fff;
+      }
+      p{
+        color: #fff;
+      }
       > * {
         display: flex;
         justify-content: space-between;
@@ -111,13 +135,14 @@
   .item {
     flex: 0 0 auto;
     border-radius: $border-radius;
+    margin-right: 2rem;
     iframe{
       border-radius: $border-radius;
       height: 70rem;
       max-width: 100%;
       border:0;
       display: flex;
-margin-right: 2rem;
+
     }
   }
 }
