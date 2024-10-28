@@ -265,30 +265,30 @@ vAnim('.anim-zoom-collection', root => {
 bc.add('js');
 
 
-const colors  = ['#f4824a', '#fb4c4c', '#3c53d3'];
-const angels = [150, ]
-$each('#start .card', ((el, index)=>{
-	let direction = false;
-	let step = Math.random()*0.3;
-	let angel = angels[index] || 10;
-	setInterval(()=>{
-		//el.style.backgroundImage = 'linear-gradient('+angel+'deg, #232429 10%, '+colors[index]+' 90%)';
-
-		el.style.backgroundImage = 'linear-gradient('+angel+'deg, #232429 80%, '+colors[index]+' 20%)';
-
-		if(angel < 150){
-			direction = false;
-		}else if(angel > 160){
-			direction = true;
-		}
-
-		if(direction){
-			angel-=step;
-		}else{
-			angel+=step;
-		}
-	}, 70);
-}))
+// const colors  = ['#f4824a', '#fb4c4c', '#3c53d3'];
+// const angels = [150, ]
+// $each('#start .card', ((el, index)=>{
+// 	let direction = false;
+// 	let step = Math.random()*0.3;
+// 	let angel = angels[index] || 10;
+// 	setInterval(()=>{
+// 		//el.style.backgroundImage = 'linear-gradient('+angel+'deg, #232429 10%, '+colors[index]+' 90%)';
+//
+// 		el.style.backgroundImage = 'linear-gradient('+angel+'deg, #232429 80%, '+colors[index]+' 20%)';
+//
+// 		if(angel < 150){
+// 			direction = false;
+// 		}else if(angel > 160){
+// 			direction = true;
+// 		}
+//
+// 		if(direction){
+// 			angel-=step;
+// 		}else{
+// 			angel+=step;
+// 		}
+// 	}, 70);
+// }))
 
 const $skills = $('#skills');
 if($skills){
