@@ -15,7 +15,7 @@
     position: relative;
     font-size: 3.5rem;
     font-weight: 900;
-    margin-bottom: 5.25rem;
+    margin-bottom: 5rem;
     line-height: 1.25;
     text-transform: uppercase;
 
@@ -23,20 +23,49 @@
       color: $brand-color;
     }
   }
-
   h2 {
     margin: 0;
     color: #fff;
+  }
+  .list{
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 4rem;
+    .card-h3{
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 1rem;
+      justify-content: center;
+      &:nth-child(2) {
+        border-left: .1rem solid #fff;
+        border-right: .1rem solid #fff;
+        padding: 0 3rem;
+      }
+      img{
+        width: 3rem;
+      }
+      h3{
+        margin-bottom: 0.4rem;
+        span{
+          color: $brand-color-2;
+        }
+      }
+    }
   }
   .cards {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    h2{
+      margin-bottom: 2rem;
+    }
     @include isDesktop{
       display: grid;
       grid-template-rows: 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
     }
+
     .card {
       min-height: 22rem;
       //border-left: .3rem solid #6b6b6b;
@@ -63,7 +92,17 @@
           background: url('../img/arrows/arrow-left.svg') center right/3rem auto;
         }
       }
-
+      .card-bottom{
+        align-items: center;
+        .card-tech{
+          display: flex;
+          gap: .8rem;
+          img{
+            width: 2.8rem;
+            max-height: 3rem;
+          }
+        }
+      }
 
       h3{
         color: #fff;
@@ -74,6 +113,17 @@
       > * {
         display: flex;
         justify-content: space-between;
+      }
+      .card-list{
+        display: flex;
+        gap: 1rem;
+        justify-content: stretch;
+        margin:2rem 0 3rem 0;
+        li{
+          border: .1rem solid $brand-color;
+          padding: 1rem;
+          font-size: 1.5rem;
+        }
       }
     }
   }
