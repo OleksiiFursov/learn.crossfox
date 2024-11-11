@@ -1,13 +1,13 @@
 const priceI60M = 35;
 
 export default format({
-	TITLE: 'Индивидуальное обучение веб-программированию',
+	TITLE: 'Профессиональное обучение веб-программированию',
 	URL: 'https://mentor.crossfox.online',
 	FOOTER_YEAR: 2024,
 	LANG: 'ru',
 
 	// COMPANY:
-	COMPANY_NAME: 'Mentor.Crossfox',
+	COMPANY_NAME: 'learn.Crossfox',
 	COMPANY_NAME_SHORT: 'Mentor CF',
 	COMPANY_DESCRIPTION: 'Освой программирование быстро и качественно с личным ментором. Индивидуальный подход. Front-end | Back-end',
 	OPENING_HOURS: 'Mo,Tu,We,Th,Fr,Sa,Su',
@@ -30,13 +30,13 @@ export default format({
 	// SERVER:
 	FOLDER_BUILD: './build',
 	FOLDER_SOURCE: './src',
-	FOLDER_COPY: ['vendor'],
+	FOLDER_COPY: ['vendor', 'video'],
 	SERVER_OPEN: false,//'external',
 	HTTPS: true,
 	PORT: 777,
 	TUNNEL: false,
 
-	GOOGLE_ANALYTICS: 'G-1L49K9TX2N',
+	//GOOGLE_ANALYTICS: 'G-1L49K9TX2N',
 
 	GROUP_MEMBERS: 5,
 	GROUP2_MEMBERS: 10,
