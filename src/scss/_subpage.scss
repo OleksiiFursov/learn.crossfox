@@ -2,69 +2,107 @@
 
 .subpage-1 {
 
-  .tags {
-    display: flex;
-    gap: 2rem;
-    max-width: 80rem;
-    margin-bottom: 2rem;
-
-    div {
-      border-radius: $border-radius;
-      padding: .5rem 1rem;
-      flex-grow: 1;
-      border: .2rem solid $brand-color;
-    }
-  }
-  button{
+  //.tags {
+  //  display: flex;
+  //  gap: 2rem;
+  //  max-width: 80rem;
+  //  margin-bottom: 2rem;
+  //
+  //  div {
+  //    border-radius: $border-radius;
+  //    padding: .5rem 1rem;
+  //    flex-grow: 1;
+  //    border: .2rem solid $brand-color;
+  //  }
+  //}
+  button {
     border-radius: $border-radius;
+    background: $brand-color;
+    padding: 1rem 2rem;
+    border: none;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: row;
+    gap: 10rem;
+    margin-top: 2rem;
+    li {
+      display: flex;
+      align-items: center;
+      color: #fff;
+      gap: 2rem;
+      padding: 1rem;
+      h3{
+
+        span {
+          display: block;
+          color: $brand-color;
+        }
+      }
+      img{
+        width: 5rem;
+        height: 5rem;
+      }
+    }
   }
 }
 
-#group-mentors{
-  .container{
+#group-mentors {
+  .container {
     display: flex;
   }
-  .text{
-    h2{
+
+  .text {
+    h2 {
       margin: 0 0 1rem 0;
     }
-    .subtitle{
+
+    .subtitle {
       margin-bottom: 4rem;
     }
-    .list{
+
+    .list {
       display: grid;
       grid-template-columns: 30rem 35rem;
       gap: 2rem;
-      .item{
+
+      .item {
         display: flex;
         align-items: center;
         border-radius: $border-radius;
 
-        h3{
+        h3 {
           margin: 0;
           padding: 2rem 1rem 2rem 3rem;
           color: $brand-color;
         }
-        &:nth-child(1){
-        }
-        &:nth-child(2){
 
-          span{
+        &:nth-child(1) {
+        }
+
+        &:nth-child(2) {
+
+          span {
             display: block;
           }
         }
-        &:nth-child(2),&:nth-child(3){
+
+        &:nth-child(2), &:nth-child(3) {
           background: $bg-dark;
-          h3{
-            span{
+
+          h3 {
+            span {
               color: $text-color-dark;
             }
           }
         }
-        &:nth-child(1){
+
+        &:nth-child(1) {
           border: .1rem solid $bg-color-dark;
-          h3{
-            span{
+
+          h3 {
+            span {
               color: $text-color;
             }
           }
@@ -72,9 +110,11 @@
       }
     }
   }
-  .image{
+
+  .image {
     margin: 0 auto;
-    img{
+
+    img {
       max-width: 50rem;
     }
   }
@@ -94,108 +134,126 @@
       min-height: 20rem;
       display: flex;
       align-items: stretch;
-      h2{
+
+      h2 {
         margin-bottom: 1rem;
       }
-      img{
+
+      img {
         width: 2rem;
       }
-      .item-text{
+
+      .item-text {
         display: flex;
         flex-direction: column;
         justify-content: center;
       }
-      .container{
+
+      .container {
         display: flex;
         gap: 10rem;
         padding-top: 2rem;
         padding-bottom: 2rem;
       }
-      .animation{
+
+      .animation {
         width: 40rem;
         display: flex;
         align-items: center;
         justify-content: center;
         position: relative;
       }
-      .animation-user{
-          img{
-            width: 5rem;
-            position: absolute;
-            &:nth-child(1){
-              left: 0%;
-              top: 35%;
-            }
-            &:nth-child(2){
-              right: 0%;
-              top: 0%;
-            }
-            &:nth-child(3){
-              right: 35%;
-              bottom: 0%;
-            }
+
+      .animation-user {
+        img {
+          width: 5rem;
+          position: absolute;
+
+          &:nth-child(1) {
+            left: 0%;
+            top: 35%;
           }
+
+          &:nth-child(2) {
+            right: 0%;
+            top: 0%;
+          }
+
+          &:nth-child(3) {
+            right: 35%;
+            bottom: 0%;
+          }
+        }
       }
 
 
-      &:nth-child(2){
+      &:nth-child(2) {
         background: $bg-dark;
         color: $text-color-dark;
       }
     }
   }
 }
-#game{
+
+#game {
   h2 {
     text-align: left;
     margin: 0;
     margin-bottom: 1rem;
   }
-  .container{
+
+  .container {
     display: flex;
     align-items: center;
   }
-  .animation-game{
+
+  .animation-game {
     width: 40rem;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    img{
+
+    img {
       width: 10rem;
     }
-    span{
+
+    span {
       position: absolute;
 
-      &:nth-child(1){
+      &:nth-child(1) {
         border-left: .6rem solid transparent;
         border-right: .6rem solid transparent;
         border-bottom: .6rem solid $text-color-dark;
         left: 35%;
         top: 15%;
       }
-      &:nth-child(2){
+
+      &:nth-child(2) {
         border-left: .3rem solid transparent;
         border-right: .3rem solid transparent;
         border-bottom: .3rem solid $text-color-dark;
         right: 30%;
         top: 18%;
       }
-      &:nth-child(3){
+
+      &:nth-child(3) {
         border-left: .5rem solid transparent;
         border-right: .5rem solid transparent;
         border-bottom: .5rem solid $text-color-dark;
         right: 27%;
         bottom: 34%;
       }
-      &:nth-child(4){
+
+      &:nth-child(4) {
         border-left: .4rem solid transparent;
         border-right: .4rem solid transparent;
         border-bottom: .4rem solid $text-color-dark;
         left: 50%;
         bottom: 15%;
       }
-      &:nth-child(5){
+
+      &:nth-child(5) {
         border-left: .8rem solid transparent;
         border-right: .8rem solid transparent;
         border-bottom: .8rem solid $text-color-dark;
@@ -208,16 +266,18 @@
 
 #positive-sign-dark {
   position: relative;
+
   h2 {
     text-align: left;
     margin: 0;
   }
 
-  .graphic-man{
+  .graphic-man {
     position: absolute;
     bottom: 0;
     right: 15%;
   }
+
   .container {
     display: flex;
     flex-direction: row;
@@ -371,18 +431,91 @@
 #about-pro {
   .container {
     display: flex;
-    gap: 10rem;
-  }
-
-  .box-img {
-    width: 55rem;
+    gap: 13rem;
   }
 
   .box {
-    margin-top: 5rem;
 
     h2 {
       margin: 0 0 2rem 0;
+      text-align: left;
+      span{
+        display: block;
+      }
+    }
+    .list-numbered{
+      >li{
+        display: flex;
+        align-items: center;
+        &::before{
+          content: " ";
+          display: block;
+          width: 1rem;
+          height: 1rem;
+          margin-right: 1rem;
+          background: $brand-color-2;
+        }
+      }
+    }
+  }
+  .box-img{
+    width: 30%;
+    position: relative;
+    span{
+      position: absolute;
+      display: block;
+      width: 33%;
+      height: .2rem;
+      background: $brand-color;
+      &:nth-child(1){
+        bottom: 0;
+        left: 0;
+        rotate: -15deg;
+      }
+      &:nth-child(2){
+        bottom: 40%;
+        left: 33%;
+        rotate: -30deg;
+      }
+      &:nth-child(3){
+        bottom: 80%;
+        left: 66%;
+        rotate: -15deg;
+      }
+    }
+    .arrow{
+      position: absolute;
+      bottom: 90%;
+      right: 5%;
+      span{
+        width: 2rem;
+        height: .1rem;
+        background: $brand-color;
+        display: block;
+        &:nth-child(1){
+          rotate: 30deg;
+          transform: translate(0,-1.5rem);
+        }
+        &:nth-child(2){
+          rotate: -45deg;
+          transform: translate(0.5rem,1rem);
+        }
+      }
+    }
+    h3{
+      position: absolute;
+    }
+    .junior{
+      bottom: 0%;
+      left: -5%;
+    }
+    .middle{
+      bottom: 30%;
+      left: 26%;
+    }
+    .senior{
+      bottom: 75%;
+      left: 58%;
     }
   }
 }
