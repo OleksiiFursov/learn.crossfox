@@ -2,8 +2,18 @@
   position: relative;
   display: flex;
   align-items: center;
+  background: #000;
   //background: url(https://images.pexels.com/photos/2387793/pexels-photo-2387793.jpeg);
-
+  &::after{
+    content: '';
+    position: absolute;
+    width:600px;
+    rotate: 180deg;
+    height:100%;
+    top:0;
+    right:0;
+    background: url('https://i.pinimg.com/736x/3b/db/d2/3bdbd2321a046dbd0b7dfb8a80ac35ab.jpg')
+  }
   h1 {
     margin-top: 10rem;
     position: relative;
